@@ -1,0 +1,17 @@
+﻿
+@model TeacherCrud.Models.Teacher
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<div id="containershow">
+    <nav>
+        <div class="back"><a class="navlink" href="/Teacher/List">Back To List of Teachers</a></div>
+        <div class="dellink"><a  href="/Teacher/DeleteConfirm/@Model.teacherid">Delete this teacher</a></div>
+    </nav>
+    <h2>@Model.teacherfname @Model.teacherlname</h2>
+    <p>Joined Since @Model.hiredate.ToString("dd-MMM-yyyy")</p>
+    <p>Employee Number: @Model.employeenumber</p>
+</div>
+
