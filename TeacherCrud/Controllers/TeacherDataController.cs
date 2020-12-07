@@ -74,7 +74,11 @@ namespace TeacherCrud.Controllers
 
         }
 
-
+        /// <summary>
+        /// Finds a teacher based on the teacherid using SQL statement
+        /// </summary>
+        /// <param name="id">teacherid in the teacher table of the database</param>
+        /// <returns>The full information about the teacher</returns>
         [HttpGet]
         public Teacher FindTeacher(int id)
         {
@@ -123,7 +127,7 @@ namespace TeacherCrud.Controllers
 
 
         /// <summary>
-        /// Deletes a Teacher from the connected MySQL Database if the ID of that Teacher exists. Does NOT maintain relational integrity. Non-Deterministic.
+        /// Deletes a Teacher from the connected MySQL Database if the ID of that Teacher exists. Maintains referential integrity.
         /// </summary>
         /// <param name="id">The ID of the Teacher.</param>
         /// <example>POST /api/TeacherData/DeleteTeacher/3</example>
@@ -159,7 +163,7 @@ namespace TeacherCrud.Controllers
 
 
         /// <summary>
-        /// Adds a Teacher to the MySQL Database.
+        /// Adds a Teacher to the MySQL Database using AJAX approach.
         /// </summary>
         /// <param name="NewTeacher">An object with fields that map to the columns of the teacher's table. Non-Deterministic.</param>
         /// <example>
@@ -170,7 +174,7 @@ namespace TeacherCrud.Controllers
 		///     "teacherlname": "James",
 		///     "employeenumber": "T098",
 		///     "hiredate": "2020-27-03",
-		///      "salary": 43
+		///     "salary": 43
         /// }
         /// </example>
         [HttpPost]
