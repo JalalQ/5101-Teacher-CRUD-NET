@@ -78,7 +78,7 @@ namespace TeacherCrud.Controllers
         /// Finds a teacher based on the teacherid using SQL statement
         /// </summary>
         /// <param name="id">teacherid in the teacher table of the database</param>
-        /// <returns>The full information about the teacher</returns>
+        /// <returns>The full information about the teacher.</returns>
         [HttpGet]
         public Teacher FindTeacher(int id)
         {
