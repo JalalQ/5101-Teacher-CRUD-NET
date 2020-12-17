@@ -1,7 +1,7 @@
 ﻿// AJAX for teacher Add can go in here!
 // This file is connected to the project via Shared/_Layout.cshtml
 
-
+// Adding a Teacher
 function AddTeacher() {
 
 	//goal: send a request which looks like this:
@@ -119,7 +119,7 @@ function AddTeacher() {
 
 }
 
-
+//updates a teacher using javascript and Ajax
 function UpdateTeacher(TeacherId) {
 
 	//goal: send a request which looks like this:

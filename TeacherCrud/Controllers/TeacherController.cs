@@ -11,6 +11,11 @@ namespace TeacherCrud.Controllers
     public class TeacherController : Controller
     {
         // GET: Teacher
+        /// <summary>
+        /// Shows the list of all teachers along with the search box so that user can search for teacher by name.
+        /// </summary>
+        /// <param name="SearchKey">teacher first/ last name, or both first and last name</param>
+        /// <returns></returns>
         public ActionResult List(string SearchKey = null)
         {
             TeacherDataController controller = new TeacherDataController();
@@ -28,6 +33,11 @@ namespace TeacherCrud.Controllers
 
 
         //GET : /Teacher/DeleteConfirm/{id}
+        /// <summary>
+        /// Providing user confirmation that the action can not be undone
+        /// </summary>
+        /// <param name="id">teacherid</param>
+        /// <returns></returns>
         public ActionResult DeleteConfirm(int id)
         {
             TeacherDataController controller = new TeacherDataController();
@@ -37,6 +47,11 @@ namespace TeacherCrud.Controllers
 
 
         //POST : /Teacher/Delete/{id}
+        /// <summary>
+        /// Delete a teacher
+        /// </summary>
+        /// <param name="id">teacherid</param>
+        /// <returns>List of teachers after teacher with the specified id has been deleted.</returns>
         [HttpPost]
         public ActionResult Delete(int id)
         {
@@ -47,18 +62,34 @@ namespace TeacherCrud.Controllers
 
 
         //GET : /Teacher/New
+        /// <summary>
+        /// Form to create new teacher.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult New()
         {
             return View();
         }
 
         //GET : /Teacher/AjaxNew
+        /// <summary>
+        /// Form to create a new teacher using Ajax
+        /// </summary>
         public ActionResult AjaxNew()
         {
             return View();
         }
 
         //POST : /Teacher/Create
+        /// <summary>
+        /// Creates a new teacher
+        /// </summary>
+        /// <param name="teacherfname">Teacher's first name</param>
+        /// <param name="teacherlname">Teacher's last name</param>
+        /// <param name="employeenumber">Teacer's employee Number</param>
+        /// <param name="hiredate">The date the teacher was hired</param>
+        /// <param name="salary">Salary</param>
+        /// <returns>To the list of the teachers if there is no error otherwise to error page</returns>
         [HttpPost]
         public ActionResult Create(string teacherfname, string teacherlname, string employeenumber, DateTime hiredate, decimal salary)
         {
@@ -98,6 +129,10 @@ namespace TeacherCrud.Controllers
         }
 
         //GET : /Teacher/New
+        /// <summary>
+        /// displays the error using server side form validation.
+        /// </summary>
+        /// <returns>Information about the missing field values.</returns>
         public ActionResult InputError()
         {
             return View();
@@ -117,6 +152,11 @@ namespace TeacherCrud.Controllers
             return View(SelectedTeacher);
         }
 
+        /// <summary>
+        /// Dispay the author which will be updated using the Ajax method
+        /// </summary>
+        /// <param name="id">teacherid</param>
+        /// <returns>Ajax Update Page for a specified teacherid</returns>
         public ActionResult AjaxUpdate(int id)
         {
             TeacherDataController controller = new TeacherDataController();
@@ -139,10 +179,11 @@ namespace TeacherCrud.Controllers
         /// POST : /Teacher/Update/10
         /// FORM DATA / POST DATA / REQUEST BODY 
         /// {
-        ///	"TeacherFname":"Christine",
-        ///	"TeacherLname":"Bittle",
-        ///	"TeacherBio":"Loves Coding!",
-        ///	"TeacherEmail":"christine@test.ca"
+        ///	"TeacherFname":"Chris",
+        ///	"TeacherLname":"Yang",
+        ///	"EmployeeNumber":"Loves Coding!",
+        ///	"HireDate":"10/10/2020",
+        ///	"salary" : 9,
         /// }
         /// </example>
         [HttpPost]
@@ -156,13 +197,11 @@ namespace TeacherCrud.Controllers
             NewTeacher.hiredate = hiredate;
             NewTeacher.salary = salary;
 
-
             TeacherDataController controller = new TeacherDataController();
             controller.UpdateTeacher(id, NewTeacher);
 
             return RedirectToAction("Show/" + id);
         }
-
 
     }
 }
