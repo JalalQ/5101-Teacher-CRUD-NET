@@ -1,0 +1,59 @@
+﻿@model TeacherCrud.Models.Teacher
+
+@{
+    ViewBag.Title = "AjaxUpdate";
+}
+
+<h2>AjaxUpdate</h2>
+
+
+<div id="containershow">
+
+    <nav>
+        <a class="navlink button" href="/Teacher/Show/@Model.teacherid">Back</a>
+    </nav>
+
+    <h2>Update @Model.teacherfname @Model.teacherlname</h2>
+    <br />
+    @{
+        /* AJAX Request to update author */
+        /* No form submission needed */
+        /* button onclick will handle form submission */
+        /* Each item has an ID for validation && ajax submission */
+    }
+
+    <div class="inputrow">
+        <label for="teacherfname">First Name:</label>
+        <input type="text" id="teacherfname" name="teacherfname" value="@Model.teacherfname" />
+
+    </div>
+    <div class="inputrow">
+        <label for="teacherlname">Last Name:</label>
+        <input type="text" id="teacherlname" name="teacherlname" value="@Model.teacherlname" />
+
+    </div>
+
+    <div class="inputrow">
+        <label for="employeenumber">Employee Number:</label>
+        <input type="text" id="employeenumber" name="employeenumber" value="@Model.employeenumber" />
+    </div>
+
+    <div class="inputrow">
+        <label for="hiredate">Hire Date:</label>
+        <input type="text" id="hiredate" name="hiredate" value="@Model.hiredate" />
+    </div>
+
+    <div class="inputrow">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" value="@Model.salary" />
+    </div>
+    @{
+        //AddAuthor() is a JS method defined in /Scripts/authors.js
+    }
+    <div class="inputrow">
+        <button onclick="UpdateTeacher(@Model.teacherid);">Update Teacher</button>
+    </div>
+    <p id="infoupdate"></p>
+</div>
+
+

@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: tan;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,46 +22,61 @@ nav {
     overflow: hidden;
     margin-bottom: 30px;
     font-size: 1.25em;
+    margin-top: 30px;
 }
 
 
 a {
     font-size: 1.25em;
+    text-decoration: none;
 }
 
-a:hover {
-
-    color: darkolivegreen;
-}
+    a:hover {
+        color: #EDD83D;
+        text-decoration: none;
+    }
 
 .navlink {
     float: left;
-    padding-top: 0.5em;
-    
+    margin-right: 50px;
 }
 
+
+
 .dellink {
-    float: right;
+    color: #dd1111;
+    display: inline;
 }
 
 .dellink a:hover {
-    color:orangered;
-
+     color: #F17300;
 }
 
-.delbutton {
-    display: block;
+.button {
+    font-size: 1em;
+    background-color: #6AB547;
+    color: #F3F9E3;
+    height: 40px;
+    padding: 0.3em 0.5em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+#containerlist {
+    width: 100%;
     margin: 0 auto;
-    background: #dd1111;
-    color: #fff;
-    border: 2px solid #000;
-    border-radius: 3px;
+    margin-top: 80px;
 }
 
-#containerlist, #containershow {
-    width: 80%;
-    margin: 0 0;
+
+#containershow {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 0;
 }
+
 
 .listitem {
     margin: 10px 0;
@@ -72,13 +88,40 @@ a:hover {
     overflow: hidden;
 }
 
+label {
+    margin-right: 10px;
+}
+
+input {
+    width: 160px;
+}
+
 .inputrow input, .inputrow textarea {
     float: right;
 }
 
 
-
 .inputrow input[type="submit"] {
-    float: none;
-    margin-top: 50px;
+   float: none;
+   margin-top: 20px;
+  
+}
+
+.error {
+    color: #F05D23;
+    font-weight: bold;
+}
+
+#infosubmit {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+#infoupdate {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+#updatebutton {
+    margin-left: 30px;
 }

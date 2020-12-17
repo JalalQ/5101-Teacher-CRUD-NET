@@ -7,8 +7,10 @@
 
 <div id="containershow">
     <nav>
-        <div class="back"><a class="navlink" href="/Teacher/List">Back To List of Teachers</a></div>
-        <div class="dellink"><a  href="/Teacher/DeleteConfirm/@Model.teacherid">Delete this teacher</a></div>
+        <div><a class="navlink button" href="/Teacher/List">List of Teachers</a></div>
+        <div><a class="navlink button" href="/Teacher/Update/@Model.teacherid"> Update Teacher</a></div>
+        <div><a class="navlink button" href="/Teacher/AjaxUpdate/@Model.teacherid"> AJAX Update</a></div>
+        <div class="dellink"><a class="navlink button" href="/Teacher/DeleteConfirm/@Model.teacherid">Delete Teacher</a></div>
     </nav>
     <h2>@Model.teacherfname @Model.teacherlname</h2>
     <p>Joined Since @Model.hiredate.ToString("dd-MMM-yyyy")</p>

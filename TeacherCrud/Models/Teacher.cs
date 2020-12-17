@@ -13,5 +13,7 @@ namespace TeacherCrud.Models
         public string employeenumber;
         public DateTime hiredate;
         public decimal salary;
+
+        //public Teacher() { }
     }
 }

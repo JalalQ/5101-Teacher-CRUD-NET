@@ -6,9 +6,10 @@
 
 
 
-<div id="containerlist">
+<div class="containerlist">
     <nav>
-        <a class="navlink" href="/Teacher/New">Add New Teacher</a>
+        <a class="navlink button" href="/Teacher/New">Add New Teacher</a>
+        <a class="navlink button" href="/Teacher/AjaxNew">Add New Teacher (AJAX)</a>
     </nav>
     <h2>List of Teachers</h2>
     <form action="/Teacher/List" method="GET">
@@ -21,6 +22,6 @@
         <div class="listitem row">
             <div class="col-md-12"><a href="/Teacher/Show/@teacher.teacherid">@teacher.teacherfname @teacher.teacherlname</a></div>
         </div>
-     }
+    }
 
 </div>

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Add teacher using the AJAX method";
 }
 
@@ -7,7 +6,7 @@
 
 <div id="containershow">
     <nav>
-        <a class="navlink" href="/Teacher/List">Back To Teachers</a>
+        <a class="navlink button" href="/Teacher/List">Back To Teachers</a>
     </nav>
     <h2>New Teacher</h2>
     @{
@@ -16,6 +15,14 @@
         /* button onclick will handle form submission */
         /* Each item has an ID for validation && ajax submission */
     }
+
+    <div>
+        <p id="FNameError" class="error"></p>
+        <p id="LNameError" class="error"></p>
+        <p id="NumberError" class="error"></p>
+        <p id="DateError" class="error"></p>
+        <p id="SalaryError" class="error"></p>
+    </div>
 
     <div class="inputrow">
         <label for="teacherfname">First Name:</label>
@@ -42,5 +49,9 @@
     @{
         //AdddTeacher() is a JS method defined in /Scripts/teacher.js
     }
-    <button onclick="AddTeacher();">Add Teacher</button>
+    <div class="inputrow">
+        <input type="submit" onclick="AddTeacher();" value="Create Teacher" />
+    </div>
+    
+    <p id="infosubmit"></p>
 </div>
