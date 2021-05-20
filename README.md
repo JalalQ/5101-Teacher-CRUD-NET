@@ -3,7 +3,7 @@
 This project is an extension of my previous project, [Teacher Read Functionality](https://github.com/JalalQ/SchoolWebProject_A3). In this project I add-up the 
 'add' and 'delete' functionalities.
 
-A full description of the scope of the assignment is given in the attached file, **5101_A4_F2020.pdf**:
+A full description of the scope of the assignment is given in the attached files, **5101_A4_F2020.pdf** and **5101_A5_F2020(2).pdf**:
 * [x] Use AJAX to add/ update teacher.
 * [x] Updated the CSS file so to improve the appearance of the site.
 * [x] Add/ Delete functionalities have been added.
